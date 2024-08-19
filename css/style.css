@@ -7,6 +7,13 @@ box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+
 ul {
     list-style-type: none;
 }
@@ -15,7 +22,11 @@ a {
     color: inherit;
 }
 
-
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 .container {
     max-width: 1220px;
@@ -35,6 +46,10 @@ body {
 }
 .header-main {
    background-color: transparent;
+   position: absolute;
+   z-index: 5;
+   left: 0;
+   right: 0;
 }
 
 .header__inner {
@@ -100,4 +115,70 @@ body {
     justify-content: center;
     gap: 40px;
 
+}
+
+/*--------main-------*/
+
+.main {
+    flex-grow: 1;
+}
+
+.top {
+  color: #fff;
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 50px;
+  position: absolute;
+   z-index: 5;
+   left: 0;
+   right: 0;
+}
+.title {
+   
+    padding-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
+    
+}
+.top__link {
+    display: inline-block;
+    background-color: #151515;
+    padding: 23px;
+    max-width: 430px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.swiper::after {
+   content: '';
+   background: rgba(21, 21, 21, .3);
+   position: absolute;
+   z-index: 5;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   top: 0;
+}
+
+.swiper-slide {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.swiper-pogination-bullet {
+    width: 120px;
+    height: 3px;
+    background-color: #151515;
+    border-radius: 0;
+    opacity: 1;
+}
+
+
+
+.swiper-pogination-bullet-active {
+     height: 6px;
+     background-color: #fff;
 }
